@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const processSteps = [
   {
     id: 1,
-    title: "সফটওয়্যার ক্রয় ও ব্যবস্থাপনা কমিটির সভা ও সিদ্ধান্ত (Managing Committee Resolution)",
+    title: "সফটওয়্যার ক্রয় ও ব্যবস্থাপনা কমিটির সভা ও সিদ্ধান্ত (Managing Committee Resolution)",
     desc: "প্রতিষ্ঠান কর্তৃপক্ষ সফটওয়্যার ব্যবহারের প্রয়োজনীয়তা অনুভব করে এবং প্রতিষ্ঠানের প্রশাসনিক ও আর্থিক কার্যক্রম ডিজিটাল করার বিষয়ে একটি সিদ্ধান্ত গ্রহণ করে।",
     icon: <ClipboardList className="w-6 h-6" />,
     fileName: "/স্কুল ব্যবস্থাপনা কমিটি তৈরি.pdf"
@@ -29,7 +29,7 @@ const processSteps = [
     title: "সফটওয়্যার নির্বাচন ও অনুমোদন (Software Selection & Approval)",
     desc: "প্রাপ্ত দরপত্রসমূহ যাচাই-বাছাই করে একটি নির্বাচন কমিটি সফটওয়্যার নির্বাচনের বিষয়ে সুপারিশ করে এবং ব্যবস্থাপনা কমিটি তা অনুমোদন দেয়।",
     icon: <CheckCircle className="w-6 h-6" />,
-    fileName: "/বিদ্যালয় পবিচালনা কবিটিি সভাি বসদ্ধান.pdf"
+    fileName: "/বিদ্যালয় পবিচালনা কবিটিি সভাি বসদ্ধান.pdf"
   },
   {
     id: 5,
@@ -56,32 +56,37 @@ const processSteps = [
 
 const Documentation = () => {
   return (
-    <div className="bg-slate-50 py-25 px-4 sm:px-6 lg:px-8 font-sans">
+    <div style={{ fontFamily: '"Noto Sans Bengali", sans-serif' }} className="bg-white py-25 px-4 sm:px-6 lg:px-8 font-sans">
+      
+      <style>
+        {`@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Bengali:wght@100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tiro+Bangla:ital@0;1&display=swap');`}
+      </style>
+
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-base font-semibold text-[#F29200] tracking-wide uppercase">কার্যপদ্ধতি</h2>
           <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            আমাদের সাথে যুক্ত হওয়ার ধাপসমূহ
+            আমাদের সাথে যুক্ত হওয়ার ধাপসমূহ
           </p>
           <div className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-            একটি প্রতিষ্ঠান যেভাবে ধাপে ধাপে ডিজিটাল স্মার্ট পাঠশালায় রূপান্তরিত হয়।
+            একটি প্রতিষ্ঠান যেভাবে ধাপে ধাপে ডিজিটাল স্মার্ট পাঠশালায় রূপান্তরিত হয়।
           </div>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Cards Wrapper - Centering logic added here */}
+        <div className="flex flex-wrap justify-center gap-8">
           {processSteps.map((step, index) => (
-            <div key={step.id} className="relative group">
-              <div className="h-full flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div key={step.id} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] group">
+              <div className="h-full flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative">
 
                 {/* Icon + Number */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center justify-center w-12 h-12 text-black rounded-xl group-hover:bg-[#F29200] group-hover:text-white transition-colors duration-300">
                     {step.icon}
                   </div>
-                  <span className="text-4xl font-bold text-gray-200 group-hover:text-[#F29200]">
+                  <span className="text-4xl font-bold text-gray-200 group-hover:text-[#F29200] transition-colors duration-300">
                     0{step.id}
                   </span>
                 </div>
@@ -107,11 +112,6 @@ const Documentation = () => {
                   </a>
                 </div>
               </div>
-
-              {/* Connector */}
-              {index !== processSteps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 border-t-2 border-dashed border-gray-300"></div>
-              )}
             </div>
           ))}
         </div>
@@ -120,7 +120,7 @@ const Documentation = () => {
         <div className="mt-16 bg-[#F29200] rounded-2xl p-8 text-center text-white shadow-lg">
           <h3 className="text-2xl font-bold">আপনার প্রতিষ্ঠান কি প্রস্তুত?</h3>
           <p className="mt-2 text-blue-100">
-            আজই আমাদের সাথে যোগাযোগ করে আপনার ডিজিটালাইজেশন প্রক্রিয়া শুরু করুন।
+            আজই আমাদের সাথে যোগাযোগ করে আপনার ডিজিটালাইজেশন প্রক্রিয়া শুরু করুন।
           </p>
           <NavLink to="/contact">
             <button className="mt-6 bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">

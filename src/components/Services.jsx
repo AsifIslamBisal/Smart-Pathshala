@@ -22,25 +22,26 @@ import LeaveManagement from '../assets/lottiefiles/human-experience.json'
 import Support from '../assets/lottiefiles/support.json'
 
 const services = [
-  { id: 1, num: "01", title: "Institution Registration & Settings", desc: "Register your institution in minutes and configure every setting to your needs — departments, academic calendars, user roles, and more from one unified control panel.", lottieData: register },
-  { id: 2, num: "02", title: "Government-Compliant Dynamic Website", desc: "Launch a fully dynamic, professionally designed website for your institution without writing a single line of code. Update news, notices, and content in real-time.", lottieData: website },
-  { id: 3, num: "03", title: "Smart Digital Admission System", desc: "Modernize enrollment with a fully paperless digital admission system. Students apply online, receive instant confirmations, and track their status live.", lottieData: admission },
-  { id: 4, num: "04", title: "Digital Database Management", desc: "Centralize all institutional data — student records, staff information, financials — in a secure, searchable, and structured digital database.", lottieData: database },
-  { id: 5, num: "05", title: "Class Routine Management", desc: "Build and publish class schedules automatically. Handle conflicts, substitutions, and updates across all departments in seconds.", lottieData: routine },
-  { id: 6, num: "06", title: "Mobile-Based Student Attendance", desc: "Teachers mark attendance via smartphone in seconds. Parents get real-time alerts. Automated reports flag chronic absenteeism before it escalates.", lottieData: mattendance },
-  { id: 7, num: "07", title: "Smart Biometric Attendance Machine", desc: "Deploy fingerprint or card-based attendance machines for accurate, tamper-proof teacher and staff tracking — fully synchronized with the cloud.", lottieData: BAttendance },
-  { id: 8, num: "08", title: "Mobile Banking Fee Collection", desc: "Accept tuition, exam, and miscellaneous fees securely through integrated mobile banking. No cash handling, no queues — full digital receipts for everyone.", lottieData: MobileBanking },
-  { id: 9, num: "09", title: "CA-Standard Accounts System", desc: "Manage institutional finances with a chartered accountant-grade platform covering income, expenses, payroll, and budget analysis in one place.", lottieData: AccountsSystem },
-  { id: 10, num: "10", title: "Assignments & Homework via App", desc: "Teachers publish assignments through the app. Students receive instant notifications, submit work digitally, and get feedback without leaving home.",  lottieData: AssignmentsHomework },
-  { id: 11, num: "11", title: "Smart Exam Management", desc: "Plan, schedule, and conduct exams with precision. Seat plans, admit cards, and result sheets are auto-generated — saving weeks of manual work.",  lottieData: ExamManagement },
-  { id: 12, num: "12", title: "Multi-Channel Notification System", desc: "Send notices instantly via App push, SMS, and Website — reaching every parent, student, and staff member wherever they are.",  lottieData: Notification },
-  { id: 13, num: "13", title: "ID & Certificate Generation", desc: "Auto-generate student ID cards, admit cards, seat plans, merit certificates, and transfer documents — formatted, branded, and print-ready.",  lottieData: CertificateGeneration },
-  { id: 14, num: "14", title: "Super-Fast Promotion System", desc: "Promote hundreds of students from one class to the next in seconds with a lightning-fast synchronized promotion engine — zero errors, zero delays.",  lottieData: Promotion },
-  { id: 15, num: "15", title: "Dedicated Profile System", desc: "Every director, teacher, staff member, student, and guardian gets a dedicated profile — with personalized dashboards, history, and document access.",  lottieData: Profile },
-  { id: 16, num: "16", title: "Super Monitoring Dashboard", desc: "Institution heads get a real-time bird's-eye view — attendance rates, fee collection, exam results, and staff activity — all in one place.", lottieData: MonitoringDashboard },
-  { id: 17, num: "17", title: "Automated Report Generation", desc: "All reports — attendance, academic, financial — are generated, organized, and synced automatically. Ready to download, share, or print at any time.",  lottieData: ReportGeneration },
-  { id: 18, num: "18", title: "Leave Management System", desc: "Teachers and staff submit leave requests digitally. Principals approve with one tap. The system tracks balances and generates detailed leave reports.",  lottieData: LeaveManagement },
-  { id: 19, num: "19", title: "Round-the-Clock Support", desc: "Our dedicated team is available 9am to 6pm a day, 6 days a week — via chat, phone, or email — so your institution never faces downtime alone.",  lottieData: Support },
+    
+    { id: 1, num: "01", title: "Institution Registration & Settings", desc: "Register your institution in minutes and configure every setting to your needs — departments, academic calendars, user roles, and more from one unified control panel.", lottieData: register },
+    { id: 2, num: "02", title: "Government-Compliant Dynamic Website", desc: "Launch a fully dynamic, professionally designed website for your institution without writing a single line of code. Update news, notices, and content in real-time.", lottieData: website },
+    { id: 3, num: "03", title: "Smart Digital Admission System", desc: "Modernize enrollment with a fully paperless digital admission system. Students apply online, receive instant confirmations, and track their status live.", lottieData: admission },
+    { id: 4, num: "04", title: "Digital Database Management", desc: "Centralize all institutional data — student records, staff information, financials — in a secure, searchable, and structured digital database.", lottieData: database },
+    { id: 5, num: "05", title: "Class Routine Management", desc: "Build and publish class schedules automatically. Handle conflicts, substitutions, and updates across all departments in seconds.", lottieData: routine },
+    { id: 6, num: "06", title: "Mobile-Based Student Attendance", desc: "Teachers mark attendance via smartphone in seconds. Parents get real-time alerts. Automated reports flag chronic absenteeism before it escalates.", lottieData: mattendance },
+    { id: 7, num: "07", title: "Smart Biometric Attendance Machine", desc: "Deploy fingerprint or card-based attendance machines for accurate, tamper-proof teacher and staff tracking — fully synchronized with the cloud.", lottieData: BAttendance },
+    { id: 8, num: "08", title: "Mobile Banking Fee Collection", desc: "Accept tuition, exam, and miscellaneous fees securely through integrated mobile banking. No cash handling, no queues — full digital receipts for everyone.", lottieData: MobileBanking },
+    { id: 9, num: "09", title: "CA-Standard Accounts System", desc: "Manage institutional finances with a chartered accountant-grade platform covering income, expenses, payroll, and budget analysis in one place.", lottieData: AccountsSystem },
+    { id: 10, num: "10", title: "Assignments & Homework via App", desc: "Teachers publish assignments through the app. Students receive instant notifications, submit work digitally, and get feedback without leaving home.",  lottieData: AssignmentsHomework },
+    { id: 11, num: "11", title: "Smart Exam Management", desc: "Plan, schedule, and conduct exams with precision. Seat plans, admit cards, and result sheets are auto-generated — saving weeks of manual work.",  lottieData: ExamManagement },
+    { id: 12, num: "12", title: "Multi-Channel Notification System", desc: "Send notices instantly via App push, SMS, and Website — reaching every parent, student, and staff member wherever they are.",  lottieData: Notification },
+    { id: 13, num: "13", title: "ID & Certificate Generation", desc: "Auto-generate student ID cards, admit cards, seat plans, merit certificates, and transfer documents — formatted, branded, and print-ready.",  lottieData: CertificateGeneration },
+    { id: 14, num: "14", title: "Super-Fast Promotion System", desc: "Promote hundreds of students from one class to the next in seconds with a lightning-fast synchronized promotion engine — zero errors, zero delays.",  lottieData: Promotion },
+    { id: 15, num: "15", title: "Dedicated Profile System", desc: "Every director, teacher, staff member, student, and guardian gets a dedicated profile — with personalized dashboards, history, and document access.",  lottieData: Profile },
+    { id: 16, num: "16", title: "Super Monitoring Dashboard", desc: "Institution heads get a real-time bird's-eye view — attendance rates, fee collection, exam results, and staff activity — all in one place.", lottieData: MonitoringDashboard },
+    { id: 17, num: "17", title: "Automated Report Generation", desc: "All reports — attendance, academic, financial — are generated, organized, and synced automatically. Ready to download, share, or print at any time.",  lottieData: ReportGeneration },
+    { id: 18, num: "18", title: "Leave Management System", desc: "Teachers and staff submit leave requests digitally. Principals approve with one tap. The system tracks balances and generates detailed leave reports.",  lottieData: LeaveManagement },
+    { id: 19, num: "19", title: "Round-the-Clock Support", desc: "Our dedicated team is available 9am to 6pm a day, 6 days a week — via chat, phone, or email — so your institution never faces downtime alone.",  lottieData: Support },
 ];
 
 function LottieOrEmoji({ lottieData }) {
@@ -150,9 +151,9 @@ function Hero() {
         tasks and enhance the learning experience for everyone.
       </p>
       <div className="flex justify-center gap-10 md:gap-20">
-        {[["19+", "Features"], ["100+", "Schools"], ["24/7", "Reliability"]].map(([v, l]) => (
+        {[["50000+", "students"], ["100+", "Institution"], ["9am-6pm", "Support"]].map(([v, l]) => (
           <div key={l} className="text-center">
-            <div className="text-4xl font-black text-orange-500">{v}</div>
+            <div className="text-2xl font-black text-orange-500">{v}</div>
             <div className="text-stone-400 text-[11px] uppercase tracking-[.2em] mt-2 font-bold">{l}</div>
           </div>
         ))}
@@ -161,7 +162,7 @@ function Hero() {
   );
 }
 
-export default function ServicesPage() {
+export default function Services() {
   return (
     <div className="bg-white min-h-screen selection:bg-orange-200">
       <main className="max-w-7xl mx-auto px-4 sm:px-6">

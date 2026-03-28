@@ -109,7 +109,7 @@ export default function HeroSection() {
       {/* ── Hero content ── */}
       <div className="absolute inset-0 z-20 flex items-center px-10 md:px-16 lg:px-24">
         <div className="max-w-md">
-          <span className={`inline-block text-[11px] font-semibold tracking-[3px] uppercase text-amber-700 mb-3 transition-all duration-500 ${textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
+          <span className={`inline-block text-[11px] font-semibold tracking-[3px] uppercase text-[#F29200] mb-3 transition-all duration-500 ${textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
             {slide.tag}
           </span>
 
