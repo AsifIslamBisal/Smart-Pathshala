@@ -94,7 +94,7 @@ export default function TeamMembers() {
       <div className="w-full lg:w-[38%] lg:sticky lg:top-8">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 transition-transform hover:scale-[1.01] duration-300">
           
-          {/* Image Section - Responsive Height */}
+          {/* Image Section  */}
           <div className="w-full h-[350px] sm:h-[450px] md:h-[600px] lg:h-[600px] bg-white overflow-hidden">
             <img 
               src={sumon} 

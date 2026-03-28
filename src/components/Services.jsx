@@ -148,7 +148,7 @@ function Hero() {
       </h1>
       <p className="max-w-2xl mx-auto text-stone-500 text-xl leading-relaxed mb-14">
         A complete digital ecosystem designed to streamline administrative 
-        tasks and enhance the learning experience for everyone.
+        tasks and enhance the learning experience for everyone
       </p>
       <div className="flex justify-center gap-10 md:gap-20">
         {[["50000+", "students"], ["100+", "Institution"], ["9am-6pm", "Support"]].map(([v, l]) => (

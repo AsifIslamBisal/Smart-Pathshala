@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import video1 from '../../assets/herovideos/video1.mp4'
+// import video2 from '../../assets/herovideos/video2.mp4'
 
 const slides = [
   {

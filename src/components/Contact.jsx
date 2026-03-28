@@ -147,7 +147,7 @@ export default function Contact() {
               <div className="bg-[#F29200] p-6 rounded-full mb-6 shadow-md">
                 <Phone className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-black uppercase mb-2">Phone (Landline)</h3>
+              <h3 className="text-xl font-black uppercase mb-2">Phone</h3>
               <p className="text-gray-700 font-semibold">+880 1824186352</p>
               <p className="text-gray-700 font-semibold">+880 1824186382</p>
               <p className="text-gray-700 font-semibold">+880 1824187489</p>
