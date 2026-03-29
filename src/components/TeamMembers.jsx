@@ -13,6 +13,7 @@ import rakibul from "../assets/team/RAKIBUL.jpeg";
 import shahin from "../assets/team/SHAHIN.jpeg";
 import shwrov from "../assets/team/SHWROV.jpeg";
 import jakir from "../assets/team/JAKIR.jpeg";
+import musfiqur from "../assets/team/MUSFIQUR.jpeg";
 
 const teamMembers = [
   
@@ -26,6 +27,7 @@ const teamMembers = [
   { id: 8, name: "SHAHIN", designation: "System Engineer", contact: "+880 1701013225", serviceArea: "Sirajganj", email: "shahin.smartpathshala@gmail.com", img: shahin },
   { id: 9, name: "SHWROV CHOWDHURY", designation: "Sales and Support Engineer", contact: " +880 1827185408", serviceArea: "Rajshahi Office ", email: " svchowdhury05@gmail.com", img: shwrov },
   { id: 10, name: "MD JAKIR HASAN", designation: "Sales and Support Engineer", contact: " +880 130797073", serviceArea: "Rajshahi Office ", email: " md.rakibhasan256@gmail.com", img: jakir },
+  { id: 11, name: "MD MUSFIQUR RAHMAN", designation: "Sales and Support Engineer", contact: " +880 1732688557", serviceArea: "Rajshahi Office ", email: " musfiqmoon30@gmail.com", img: musfiqur },
 ];
 
 const PhoneIcon = () => (

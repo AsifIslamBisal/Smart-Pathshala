@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import video1 from '../../assets/herovideos/video1.mp4'
-// import video2 from '../../assets/herovideos/video2.mp4'
+import video1 from "../../assets/herovideos/video1.mp4";
 
 const slides = [
   {
@@ -23,11 +22,9 @@ const slides = [
   },
 ];
 
-const DURATION = 8000;
-
 function DownloadIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
       <polyline points="7 10 12 15 17 10" />
       <line x1="12" y1="15" x2="12" y2="3" />
@@ -39,10 +36,8 @@ export default function HeroSection() {
   const [current, setCurrent] = useState(0);
   const [textVisible, setTextVisible] = useState(true);
   const videoRefs = useRef([]);
-  const timerRef = useRef(null);
 
   const goTo = (idx) => {
-    clearTimeout(timerRef.current);
     setTextVisible(false);
 
     const oldVid = videoRefs.current[current];
@@ -54,23 +49,20 @@ export default function HeroSection() {
 
       const vid = videoRefs.current[idx];
       if (vid) {
+        vid.pause();
         vid.currentTime = 0;
+        vid.load(); 
         vid.play().catch(() => {});
       }
-
-      timerRef.current = setTimeout(
-        () => goTo((idx + 1) % slides.length),
-        DURATION
-      );
     }, 350);
   };
 
   useEffect(() => {
     const vid = videoRefs.current[0];
-    if (vid) vid.play().catch(() => {});
-    timerRef.current = setTimeout(() => goTo(1), DURATION);
-
-    return () => clearTimeout(timerRef.current);
+    if (vid) {
+      vid.muted = true;
+      vid.play().catch(() => {});
+    }
   }, []);
 
   const handleVideoEnd = (idx) => {
@@ -82,32 +74,39 @@ export default function HeroSection() {
   const slide = slides[current];
 
   return (
-    <section className="font-outfit relative w-full h-screen min-h-[520px] max-h-[780px] overflow-hidden bg-black">
-      {/* ── Videos ── */}
+    <section className="font-outfit relative w-full h-screen min-h-[520px] max-h-[780px] overflow-hidden">
+      
+      {/* Videos */}
       {slides.map((s, i) => (
         <video
-          key={i}
+          key={i} 
           ref={(el) => (videoRefs.current[i] = el)}
           src={s.video}
           muted
           playsInline
           preload="auto"
           onEnded={() => handleVideoEnd(i)}
+          onCanPlay={(e) => {
+            if (i === current) {
+              e.target.play().catch(() => {});
+            }
+          }}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            i === current ? "opacity-100" : "opacity-0"
+            i === current ? "opacity-100 z-0" : "opacity-0 z-0"
           }`}
         />
       ))}
 
-      {/* ── Overlay ── */}
+      {/* Overlay ) */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
-          background: "linear-gradient(to right, rgba(255,255,255,0.93) 0%, rgba(255,255,255,0.78) 22%, rgba(255,255,255,0.38) 48%, transparent 68%)",
+          background:
+            "linear-gradient(to right, rgba(255,255,255,0.93) 0%, rgba(255,255,255,0.78) 22%, rgba(255,255,255,0.38) 48%, transparent 68%)",
         }}
       />
 
-      {/* ── Hero content ── */}
+      {/* Content  */}
       <div className="absolute inset-0 z-20 flex items-center px-10 md:px-16 lg:px-24">
         <div className="max-w-md">
           <span className={`inline-block text-[11px] font-semibold tracking-[3px] uppercase text-[#F29200] mb-3 transition-all duration-500 ${textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
@@ -122,7 +121,6 @@ export default function HeroSection() {
             {slide.desc}
           </p>
 
-          {/* Button Fixed Here */}
           <a 
             href="https://play.google.com/store/apps/details?id=com.smartpathshala.teacher" 
             target="_blank" 
@@ -135,8 +133,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* ── Slide dots ── */}
-      <div className="absolute bottom-6 left-10 md:left-16 z-30 flex items-center gap-2">
+      {/* Dots  */}
+      {/* <div className="absolute bottom-6 left-10 md:left-16 z-30 flex items-center gap-2">
         {slides.map((_, i) => (
           <button
             key={i}
@@ -146,7 +144,7 @@ export default function HeroSection() {
             }`}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

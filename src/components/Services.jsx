@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue, animate } from "framer-motion";
 import { Player } from "@lottiefiles/react-lottie-player";
 import register from '../assets/lottiefiles/register.json'
 import website from '../assets/lottiefiles/website.json'
@@ -56,6 +56,21 @@ function LottieOrEmoji({ lottieData }) {
     );
   }
   return null;
+}
+
+function Counter({ from, to }) {
+    const nodeRef = useRef();
+    useEffect(() => {
+        const node = nodeRef.current;
+        const controls = animate(from, to, {
+            duration: 3, // ২ সেকেন্ড ধরে বাড়বে
+            onUpdate(value) {
+                node.textContent = Math.round(value).toLocaleString();
+            },
+        });
+        return () => controls.stop();
+    }, [from, to]);
+    return <span ref={nodeRef} />;
 }
 
 function ServiceRow({ service, index }) {
@@ -153,7 +168,14 @@ function Hero() {
       <div className="flex justify-center gap-10 md:gap-20">
         {[["50000+", "students"], ["100+", "Institution"], ["9am-6pm", "Support"]].map(([v, l]) => (
           <div key={l} className="text-center">
-            <div className="text-2xl font-black text-orange-500">{v}</div>
+            <div className="text-2xl font-black text-orange-500">
+               {/* এখানে কাউন্টার অ্যানিমেশন সেট করা হয়েছে */}
+              {v.includes('+') ? (
+                <><Counter from={0} to={parseInt(v)} />+</>
+              ) : (
+                v
+              )}
+            </div>
             <div className="text-stone-400 text-[11px] uppercase tracking-[.2em] mt-2 font-bold">{l}</div>
           </div>
         ))}

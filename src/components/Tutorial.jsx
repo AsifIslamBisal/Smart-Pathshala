@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// Framer Motion ইম্পোর্ট
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Tutorial = () => {
   const videos = [
@@ -53,8 +55,13 @@ const Tutorial = () => {
 
   return (
     <div className="p-6 max-w-6xl mx-auto mt-20">
-      {/* Search */}
-      <div className="flex justify-center mb-10">
+      {/* Search Bar Animation */}
+      <motion.div 
+        className="flex justify-center mb-10"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="relative w-full max-w-md">
           <input
             type="text"
@@ -63,45 +70,68 @@ const Tutorial = () => {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-      </div>
+      </motion.div>
 
-      {/* Video Grid */}
-      <div className="grid md:grid-cols-3 gap-6">
-        {filteredVideos.map((video) => (
-          <div
-            key={video.id}
-            className="cursor-pointer transform transition duration-300 hover:scale-105  p-2 rounded-lg"
-            onClick={() => setSelectedVideo(video)}
-          >
-            <img
-              className="rounded-lg w-full"
-              src={`https://img.youtube.com/vi/${video.youtubeId}/0.jpg`}
-              alt={video.title}
-            />
-            <p className="mt-2 font-semibold">{video.title}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Modal */}
-      {selectedVideo && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-          <div className="relative w-[90%] md:w-[800px]">
-            <button
-              className="absolute -top-10 right-0 text-white text-2xl"
-              onClick={() => setSelectedVideo(null)}
+      {/* Video Grid Animation */}
+      <motion.div 
+        className="grid md:grid-cols-3 gap-10"
+        layout
+      >
+        <AnimatePresence>
+          {filteredVideos.map((video) => (
+            <motion.div
+              layout
+              key={video.id}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.5 }}
+              className="cursor-pointer transform transition duration-300 hover:scale-105  p-2 rounded-lg"
+              onClick={() => setSelectedVideo(video)}
             >
-              ✕
-            </button>
-            <iframe
-              className="w-full h-[450px] rounded-lg"
-              src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
-              title={selectedVideo.title}
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      )}
+              <img
+                className="rounded-lg w-full"
+                src={`https://img.youtube.com/vi/${video.youtubeId}/0.jpg`}
+                alt={video.title}
+              />
+              <p className="mt-2 font-semibold">{video.title}</p>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
+
+      {/* Modal Animation */}
+      <AnimatePresence>
+        {selectedVideo && (
+          <motion.div 
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div 
+              className="relative w-[90%] md:w-[800px]"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ type: "spring", duration: 0.5 }}
+            >
+              <button
+                className="absolute -top-10 right-0 text-white text-2xl"
+                onClick={() => setSelectedVideo(null)}
+              >
+                ✕
+              </button>
+              <iframe
+                className="w-full h-[450px] rounded-lg"
+                src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
+                title={selectedVideo.title}
+                allowFullScreen
+              ></iframe>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
