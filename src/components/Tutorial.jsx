@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// Framer Motion ইম্পোর্ট
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Tutorial = () => {

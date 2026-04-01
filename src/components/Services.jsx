@@ -63,7 +63,7 @@ function Counter({ from, to }) {
     useEffect(() => {
         const node = nodeRef.current;
         const controls = animate(from, to, {
-            duration: 3, // ২ সেকেন্ড ধরে বাড়বে
+            duration: 3, 
             onUpdate(value) {
                 node.textContent = Math.round(value).toLocaleString();
             },
@@ -113,7 +113,7 @@ function ServiceRow({ service, index }) {
         transition-shadow duration-500
       `}
     >
-      {/* ── Text side ── */}
+      {/*  Text side  */}
       <div className="flex-1 max-w-lg relative z-10">
         <span className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[.2em] uppercase text-orange-500 bg-orange-50 border border-orange-100 rounded-full px-3 py-1 mb-5">
           <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
@@ -127,7 +127,7 @@ function ServiceRow({ service, index }) {
         </p>
       </div>
 
-      {/* ── Animation side ── */}
+      {/*  Animation side */}
       <div className="flex-shrink-0 flex justify-center items-center relative z-10">
         <motion.div
           whileHover={{ scale: 1.05, rotate: even ? 2 : -2 }}
@@ -169,7 +169,6 @@ function Hero() {
         {[["50000+", "students"], ["100+", "Institution"], ["9am-6pm", "Support"]].map(([v, l]) => (
           <div key={l} className="text-center">
             <div className="text-2xl font-black text-orange-500">
-               {/* এখানে কাউন্টার অ্যানিমেশন সেট করা হয়েছে */}
               {v.includes('+') ? (
                 <><Counter from={0} to={parseInt(v)} />+</>
               ) : (

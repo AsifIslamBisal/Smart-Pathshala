@@ -75,13 +75,11 @@ const Documentation = () => {
           </div>
         </div>
 
-        {/* Cards Wrapper - Centering logic added here */}
+        {/* Cards Wrapper */}
         <div className="flex flex-wrap justify-center gap-8">
           {processSteps.map((step, index) => (
             <div key={step.id} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] group">
               <div className="h-full flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative">
-
-                {/* Icon + Number */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center justify-center w-12 h-12 text-black rounded-xl group-hover:bg-[#F29200] group-hover:text-white transition-colors duration-300">
                     {step.icon}
@@ -90,15 +88,12 @@ const Documentation = () => {
                     0{step.id}
                   </span>
                 </div>
-
-                {/* Content */}
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {step.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   {step.desc}
                 </p>
-
                 {/* PDF Button */}
                 <div className="mt-auto">
                   <a

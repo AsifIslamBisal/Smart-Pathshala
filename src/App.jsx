@@ -274,7 +274,7 @@ function App() {
             ))}
           </div>
         </div>
-        {/* --- New See All Partners Button Start --- */}
+        {/* - New See All Partners Button Start  */}
         <div className="mt-5 flex justify-end">
           <a 
             href="/clients" 
@@ -290,7 +290,7 @@ function App() {
             </svg>
           </a>
         </div>
-        {/* --- New See All Partners Button End --- */}
+        {/*  New See All Partners Button End */}
       </section>
 
       {selectedPartner && (
@@ -308,7 +308,6 @@ function App() {
             >
               ✕
             </button>
-
             <div className="flex flex-col items-center mb-6">
               <div className="p-3 bg-white rounded-xl shadow-sm border border-gray-50 mb-3">
                 <img

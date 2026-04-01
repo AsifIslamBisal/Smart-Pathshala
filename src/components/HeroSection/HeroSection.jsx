@@ -132,19 +132,6 @@ export default function HeroSection() {
           </a>
         </div>
       </div>
-
-      {/* Dots  */}
-      {/* <div className="absolute bottom-6 left-10 md:left-16 z-30 flex items-center gap-2">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => goTo(i)}
-            className={`h-[3px] rounded-full transition-all duration-300 border-0 cursor-pointer ${
-              i === current ? "w-10 bg-amber-700" : "w-6 bg-black/25 hover:bg-black/50"
-            }`}
-          />
-        ))}
-      </div> */}
     </section>
   );
 }

@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import logo from '../assets/logo.png'
-
-/* ── tiny in-view hook ── */
 const useInView = () => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -16,7 +14,6 @@ const useInView = () => {
   return [ref, visible];
 };
 
-/* ── reusable pieces ── */
 const ColHead = ({ children }) => (
   <h5 style={{ color: "#F29200" }}
     className="text-[10px] tracking-[0.22em] uppercase font-semibold mb-6 flex items-center gap-2">
@@ -50,7 +47,6 @@ const Social = ({ label, href = "#", children }) => (
   </a>
 );
 
-/* ─── MAIN FOOTER ─── */
 export default function Footer() {
   const [rootRef, visible] = useInView();
 
@@ -71,8 +67,6 @@ export default function Footer() {
 
       <div className="relative max-w-8xl mx-auto px-6 xl:px-10 pt-16 pb-10">
         <div className={`grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-16 mb-14 ${fadeBase} ${visible ? show : hide}`}>
-
-          {/* ── BRAND & CONTACT ── */}
           <div className="lg:col-span-4">
             <div className="flex items-start gap-3.5 mb-6">
               <img src={logo} alt="Logo" className="w-10 h-auto" />
@@ -84,7 +78,6 @@ export default function Footer() {
             <p className="text-neutral-500 text-[13.5px] leading-relaxed mb-7 max-w-[300px]">
               Empowering educational institutions with intelligent management solutions — from administration to analytics, all in one platform.
             </p>
-
             <div className="space-y-3">
               <a href="tel:+8801700000000" className="flex items-center gap-3 group">
                 <div className="w-8 h-8 rounded-lg border border-neutral-200 group-hover:border-[#F29200] flex items-center justify-center transition-colors">
@@ -115,7 +108,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* ── LINK COLS ── */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-10">
             <div>
               <ColHead>Services</ColHead>

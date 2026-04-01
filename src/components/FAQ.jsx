@@ -8,10 +8,8 @@ const FAQ = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        // মোবাইলের জন্য শুধু বামের ১ নম্বর (col1-0) ওপেন থাকবে
         setOpenIndex(['col1-0']);
       } else {
-        // কম্পিউটারের জন্য বামের ১ নম্বর (col1-0) এবং ডানের ৩ নম্বর (col2-2) ওপেন থাকবে
         setOpenIndex(['col1-0', 'col2-2']);
       }
     };

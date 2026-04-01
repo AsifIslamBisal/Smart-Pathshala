@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion'; // অ্যানিমেশনের জন্য ইম্পোর্ট
+import { motion, AnimatePresence } from 'framer-motion'; 
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -66,8 +66,6 @@ export default function Contact() {
       setStatus('failed');
     }
   };
-
-  // অ্যানিমেশন ভেরিয়েন্ট
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -77,7 +75,6 @@ export default function Contact() {
     <div className=" min-h-screen font-sans mt-15 overflow-hidden">
       <div className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* হেডার অ্যানিমেশন */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -86,8 +83,6 @@ export default function Contact() {
             <h1 className="text-5xl font-black text-gray-900 mb-2 uppercase tracking-tight">Contact Us</h1>
             <p className="text-xl font-bold text-gray-700 mb-10">Join hundreds of schools upgrading to smart management. We are just a message away!</p>
           </motion.div>
-
-          {/* ফর্ম সেকশন অ্যানিমেশন */}
           <motion.div 
             className="space-y-5"
             variants={{
@@ -151,8 +146,6 @@ export default function Contact() {
             >
               {status === 'sending' ? 'Sending...' : 'Submit'}
             </motion.button>
-
-            {/* সাকসেস/এরর মেসেজ অ্যানিমেশন */}
             <AnimatePresence>
               {status === 'success' && (
                 <motion.p 
@@ -168,8 +161,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
-
-      {/* Info Cards Section - Scroll Animation */}
       <div className="bg-[#D9D9D9] py-12">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div 
@@ -218,7 +209,7 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Map Section - Smooth Fade In */}
+      {/* Map Section*/}
       <motion.div 
         className="w-full h-[450px] border-t-8 border-[#F29200] overflow-hidden bg-gray-200"
         initial={{ opacity: 0 }}

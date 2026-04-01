@@ -23,14 +23,14 @@ const AboutPage = () => {
     { icon: <BookOpen size={32} />, title: "হোমওয়ার্ক ম্যানেজমেন্ট", desc: "অ্যাপের মাধ্যমেই ডিজিটাল অ্যাসাইনমেন্ট জমা এবং শিক্ষকদের ফিডব্যাক সিস্টেম।" },
   ];
 
-  // ১. ধীরগতির ও স্মুথ অ্যানিমেশন কনফিগারেশন
+
   const smoothFadeInUp = {
     hidden: { opacity: 0, y: 50, filter: "blur(5px)" },
     visible: { 
       opacity: 1, 
       y: 0, 
       filter: "blur(0px)",
-      transition: { duration: 1.2, ease: "easeOut" } // ১.২ সেকেন্ড সময় দেওয়া হয়েছে স্মুথনেসের জন্য
+      transition: { duration: 1.2, ease: "easeOut" } 
     }
   };
 
@@ -39,7 +39,7 @@ const AboutPage = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2 // প্রতিটি আইটেমের মাঝে ০.২ সেকেন্ড গ্যাপ
+        staggerChildren: 0.2 
       }
     }
   };
@@ -53,11 +53,10 @@ const AboutPage = () => {
         {`@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap');`}
       </style>
 
-      {/* 1. Hero Section & Logo Animation */}
+      {/* Hero Section & Logo Animation */}
       <section className="relative overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           
-          {/* লোগো অ্যানিমেশন: ব্লার থেকে ক্লিয়ার হবে */}
           <motion.div 
             className="inline-flex items-center justify-center p-4 rounded-3xl mb-8 w-50 h-50"
             initial={{ opacity: 0, filter: "blur(15px)", scale: 0.8 }}
@@ -88,7 +87,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 2. Mission & Vision - Slow Slide-in */}
+      {/* Mission & Vision - Slow Slide-in */}
       <section className="py-24 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div 
@@ -121,7 +120,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 3. What We Do - Smooth Staggered Grid */}
+      {/* What We Do  */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
@@ -161,7 +160,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 4. Why Choose Us - Extra Smooth Checkmarks */}
+      {/*  Why Choose Us */}
       <section className="py-24 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div
@@ -213,8 +212,6 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* 5. CTA Section - Gentle Fade In */}
       <section className="py-24 px-6">
         <motion.div 
           className="max-w-7xl mx-auto bg-[#F29200] rounded-[3rem] p-12 text-center text-white relative overflow-hidden"

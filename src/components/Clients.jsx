@@ -250,8 +250,6 @@ const Clients = () => {
           ))}
         </div>
       </div>
-
-       
       {selectedPartner && (
         <div
           onClick={() => setSelectedPartner(null)}
@@ -282,7 +280,6 @@ const Clients = () => {
                 {selectedPartner.name}
               </h3>
             </div>
-
             {/* Info Sections */}
             <div className="flex flex-col gap-3 mb-8">
               <div className="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-xl p-3">
@@ -310,7 +307,7 @@ const Clients = () => {
               </div>
             </div>
 
-            {/* Client Review / Testimonial */}
+            {/* Client Review */}
             <div className="relative p-5 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl border border-cyan-100">
               <div className="flex items-center gap-2 mb-2">
                 <RiDoubleQuotesL className="text-xl text-cyan-400" />
