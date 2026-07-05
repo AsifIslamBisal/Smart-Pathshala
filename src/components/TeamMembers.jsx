@@ -9,25 +9,26 @@ import alim from "../assets/team/ALIM.jpeg";
 import ariful from "../assets/team/ARIFUL.jpeg";
 import foysal from "../assets/team/FOYSAL.jpeg";
 import muntasir from "../assets/team/MUNTASIR.jpeg";
-import rakibul from "../assets/team/RAKIBUL.jpeg";
-import shahin from "../assets/team/SHAHIN.jpeg";
-import shwrov from "../assets/team/SHWROV.jpeg";
-import jakir from "../assets/team/JAKIR.jpeg";
-import musfiqur from "../assets/team/MUSFIQUR.jpeg";
+import ronobi from "../assets/team/RONOBI.jpeg";
+import nahid from "../assets/team/NAHID.jpeg";
+import sadiqul from "../assets/team/SADIQUL.jpeg";
+import naime from "../assets/team/NAIME.jpeg";
+import shahnewaz from "../assets/team/SHAHNEWAZ.jpeg";
+
 
 const teamMembers = [
-  
-  { id: 1, name: "MD MASUM PK", designation: "System Engineer", contact: "+880 1328133568", serviceArea: "Dhaka", email: "mridul.smartpathshala@gmail.com", img: masum },
-  { id: 2, name: "MD. ABU RAIHAN", designation: "System Engineer", contact: "+880 1952213662", serviceArea: "Rajshahi Office", email: "raihansiems@gmail.com", img: raihan },
+  { id: 1, name: "MD. ABU RAIHAN", designation: "Operation Manager", contact: "+880 1952213662", serviceArea: "Rajshahi Office", email: "raihansiems@gmail.com", img: raihan },
+  { id: 2, name: "MD MASUM PK", designation: "System Engineer", contact: "+880 1328133568", serviceArea: "Dhaka", email: "mridul.smartpathshala@gmail.com", img: masum },
   { id: 3, name: "MD ALIM HOSSAIN", designation: "System Engineer", contact: "+880 1827066205", serviceArea: "Rajshahi Office", email: "alim444h@gmail.com", img: alim },
   { id: 4, name: "MD ARIFUL ISLAM", designation: "Sales and Support Engineer", contact: "+880 1701012143", serviceArea: "Masjid Mission Academy", email: "arif.hh422@gmail.com", img: ariful },
   { id: 5, name: "SHEIKH FOYSAL SHAHRIER RABIT", designation: "System Engineer", contact: " +880 1560061649", serviceArea: "Khulna", email: " siems.rabit@gmail.com", img: foysal },
   { id: 6, name: "MUNTASIR AHMED", designation: "System Engineer", contact: "+880 1815103126", serviceArea: "Rajshahi University School", email: "muntasir0939@gmail.com", img: muntasir },
-  { id: 7, name: "MD RAKIBUL ISLAM", designation: "System Engineer", contact: "+880 1824186352", serviceArea: "Rajshahi Office", email: "rakibsiems@gmail.com", img: rakibul },
-  { id: 8, name: "SHAHIN", designation: "System Engineer", contact: "+880 1701013225", serviceArea: "Sirajganj", email: "shahin.smartpathshala@gmail.com", img: shahin },
-  { id: 9, name: "SHWROV CHOWDHURY", designation: "Sales and Support Engineer", contact: " +880 1827185408", serviceArea: "Rajshahi Office ", email: " svchowdhury05@gmail.com", img: shwrov },
-  { id: 10, name: "MD JAKIR HASAN", designation: "Sales and Support Engineer", contact: " +880 130797073", serviceArea: "Rajshahi Office ", email: " md.rakibhasan256@gmail.com", img: jakir },
-  { id: 11, name: "MD MUSFIQUR RAHMAN", designation: "Sales and Support Engineer", contact: " +880 1732688557", serviceArea: "Rajshahi Office ", email: " musfiqmoon30@gmail.com", img: musfiqur },
+  { id: 7, name: "RONOBI REZA", designation: "Sales Executive Officer", contact: "+8801625553840", serviceArea: "Rajshahi Office", email: "ronobi.siems@gmail.com", img: ronobi },
+  { id: 8, name: "MD.NAHID UZZAMAN ", designation: "System Engineer ", contact: "+880 01307919226", serviceArea: "Rajshahi Office", email: "njsnahid001@gmail.com", img: nahid },
+  { id: 9, name: "SADIQUL ISLAM", designation: "System Engineer ", contact: " +880  01625553841", serviceArea: "Rajshahi Office ", email: " rajshimul183@gmail.com", img: sadiqul },
+  { id: 10, name: "MD.RASHADUL ISLAM NAIME", designation: "System Engineer", contact:"+8801795146909", serviceArea: "Rajshahi Office", email: "rashadulnaime@gmail.com", img: naime},
+  { id: 10, name: "MD.SHAH NEWAZ", designation: "System Engineer", contact:"+8801887060013", serviceArea: " Bogura", email: "newmails120@gmail.com", img: shahnewaz},
+
 ];
 
 const PhoneIcon = () => (
@@ -51,7 +52,7 @@ const MapIcon = () => (
 export default function TeamMembers() {
   const [hovered, setHovered] = useState(null);
 
-  {/* Google Fonts Import */}
+  {/* Google Fonts  */}
       <style>
         {`@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Bengali:wght@100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tiro+Bangla:ital@0;1&display=swap');`}
       </style>
@@ -75,7 +76,7 @@ export default function TeamMembers() {
 
       <div style={{ fontFamily: '"Noto Sans Bengali", sans-serif' }} className="min-h-screen bg-white font-sans px-5 py-25">
 
-        {/* ── Header ── */}
+
         <div className="text-center mb-10">
           <span className="inline-block bg-indigo-50 text-[#F29200] text-[10px] font-bold tracking-[0.3em] uppercase px-4 py-1.5 rounded-full mb-2 border border-indigo-100">
             SIEMS NETWORK
@@ -92,11 +93,11 @@ export default function TeamMembers() {
   <div className="max-w-7xl mx-auto">
     <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
       
-      {/* Left Side: Profile Card */}
+
       <div className="w-full lg:w-[38%] lg:sticky lg:top-8">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 transition-transform hover:scale-[1.01] duration-300">
           
-          {/* Image Section  */}
+
           <div className="w-full h-[350px] sm:h-[450px] md:h-[600px] lg:h-[600px] bg-white overflow-hidden">
             <img 
               src={sumon} 
@@ -106,13 +107,12 @@ export default function TeamMembers() {
           </div>
           
           <div className="px-6 py-4 md:py-4">
-            {/* Name and Designation */}
             <div className="text-left mb-6">
               <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900">SUMON SHUVO</h3>
               <p className="text-[#F29200] font-semibold text-lg mt-1">Managing Director</p>
             </div>
 
-            {/* Contact Information */}
+
             <div className="space-y-4 border-t border-gray-100 pt-4 text-gray-700">
               <div className="flex items-center gap-2">
                 <div className="p-2.5 bg-orange-50 rounded-lg text-[#F29200] shrink-0">
@@ -140,7 +140,7 @@ export default function TeamMembers() {
               </div>
             </div>
 
-            {/* Company Footer */}
+
             <div className="mt-4 pt-4 border-t border-gray-100">
               <p className="text-[10px] text-center text-gray-400 uppercase tracking-widest font-bold">
                 SIEMS - Smart Pathshala
@@ -150,7 +150,7 @@ export default function TeamMembers() {
         </div>
       </div>
 
-      {/* Right Side: Message Content */}
+
       <div className="w-full lg:w-[62%] bg-white p-6 md:p-8 lg:p-12 rounded-2xl shadow-sm border border-gray-100">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">
@@ -212,7 +212,7 @@ export default function TeamMembers() {
   </div>
 </section>
 
-{/* ── Core Engineering Leaders - Compact Full Image ── */}
+
         <div className="max-w-6xl mx-auto mt-10 mb-16 px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-2 uppercase tracking-tight">
@@ -245,32 +245,31 @@ export default function TeamMembers() {
                 key={idx} 
                 className="relative group w-full md:w-[450px] h-[550px] md:h-[550px] overflow-hidden rounded-[2rem] shadow-xl border-[3px] border-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
               >
-                {/* Full Image */}
                 <img 
                   src={eng.img} 
                   className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" 
                   alt={eng.name}
                 />
                 
-                {/* Subtle Gradient Overlay */}
+
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
-                {/* Info Container */}
+
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
                   
-                  {/* Badge */}
+
                   <div className="mb-2">
                     <span className="inline-block bg-[#F29200] text-white text-[9px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest shadow-lg">
                       {eng.designation}
                     </span>
                   </div>
 
-                  {/* Name */}
+
                   <h3 className="text-xl md:text-2xl font-black text-white leading-tight mb-4 drop-shadow-md uppercase">
                     {eng.name}
                   </h3>
                   
-                  {/* Hover Details */}
+
                   <div className="h-0 group-hover:h-28 opacity-0 group-hover:opacity-100 transition-all duration-500 overflow-hidden">
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2 text-white/90 text-[13px]">
@@ -297,7 +296,6 @@ export default function TeamMembers() {
           </div>
         </div>
 
-        {/* ── Grid ── */}
         <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-x-8 gap-y-12">
           {teamMembers.map((m, i) => (
             <div
@@ -308,7 +306,7 @@ export default function TeamMembers() {
               onMouseLeave={() => setHovered(null)}
             >
 
-              {/* ── Image Card ── */}
+
               <div
                 className="img-card rounded-3xl overflow-hidden relative aspect-[4/5]"
                 style={{
@@ -336,7 +334,6 @@ export default function TeamMembers() {
                 </div>
               </div>
 
-              {/* ── Text Content ── */}
               <div className="mt-5 px-1">
                 <h3 className="text-slate-900 font-bold text-lg leading-tight mb-3 transition-colors group-hover:text-[#F29200]">
                   {m.name}

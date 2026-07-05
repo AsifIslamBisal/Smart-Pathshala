@@ -8,7 +8,6 @@ const ErrorPage = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-linear-to-br from-white via-cyan-50/30 to-white px-6 py-12 text-center lg:text-left gap-10">
       
-      {/* Text Content */}
       <div className="max-w-md space-y-4 animate-fadeIn">
         <h1 className="text-6xl font-extrabold text-blue-400 drop-shadow-sm">
           404
@@ -28,7 +27,7 @@ const ErrorPage = () => {
         </button>
       </div>
 
-      {/* Animation */}
+
       <div className="w-80 lg:w-96">
         <Lottie animationData={errorAnime} loop={true} />
       </div>

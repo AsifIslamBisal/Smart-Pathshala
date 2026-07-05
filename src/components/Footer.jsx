@@ -157,8 +157,8 @@ export default function Footer() {
 
         <div className="h-px bg-neutral-100 mb-8" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-neutral-400 text-xs">© {new Date().getFullYear()} <span className="text-black font-medium">Smart Pathshala</span> — All rights reserved.</p>
+        <div className="flex flex-wrap items-center justify-between gap-6">
+          <p className="text-neutral-400 text-xs">© {new Date().getFullYear()} <span className="text-black font-medium">Smart Pathshala</span> — All rights reserved.  | Developed, Maintained & Protected by Smart Pathshala.</p>
 
           <div className="flex items-center gap-3">
             <Social label="Facebook" href="https://www.facebook.com/share/1BLNeNQgJ9/">

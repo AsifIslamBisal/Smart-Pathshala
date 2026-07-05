@@ -102,7 +102,7 @@ const KeyFeature = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       
-      {/* HERO HEADER*/}
+
       <header className="max-w-4xl mx-auto px-5 pt-16 pb-10 text-center">
         <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
           The All-in-One Solution for <span style={{ color: "#F29200" }}>Modern Education Institute</span> Management
@@ -113,7 +113,6 @@ const KeyFeature = () => {
         </p>
       </header>
 
-      {/*  FEATURES GRID  */}
       <section className="max-w-7xl mx-auto px-5 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           {features.map((cat, ci) => (
@@ -128,7 +127,7 @@ const KeyFeature = () => {
                 boxShadow: active === ci ? "0 14px 40px rgba(242,146,0,0.15)" : "0 1px 6px rgba(0,0,0,0.05)",
               }}
             >
-              {/* Header */}
+
               <div
                 className="flex items-center gap-3 px-4 py-3 border-b-2 transition-colors duration-200"
                 style={{
@@ -145,7 +144,7 @@ const KeyFeature = () => {
                 <span className="font-black text-sm text-gray-900">{cat.category}</span>
               </div>
 
-              {/* Items */}
+
               <div className="px-3 py-2 space-y-0.5">
                 {cat.items.map((item, ii) => (
                   <div
@@ -175,7 +174,7 @@ const KeyFeature = () => {
         </div>
       </section>
 
-      {/*  APPS SECTION */}
+
       <section className="max-w-7xl mx-auto px-5 pb-10">
         <div className="rounded-2xl  px-7 py-8 text-center">
           <Smartphone size={30} color="#F29200" className="mx-auto mb-2.5" />

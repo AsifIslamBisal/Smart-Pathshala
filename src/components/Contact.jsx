@@ -172,7 +172,7 @@ export default function Contact() {
               visible: { transition: { staggerChildren: 0.2 } }
             }}
           >
-            {/* Support */}
+
             <motion.div variants={fadeInUp} className="flex flex-col items-center">
               <motion.div whileHover={{ rotate: 10 }} className="bg-[#F29200] p-6 rounded-full mb-6 shadow-md">
                 <Mail className="w-10 h-10 text-white" />
@@ -183,7 +183,7 @@ export default function Contact() {
               <p className="text-gray-700 font-semibold">sumon.smartpathshala@gmail.com</p>
             </motion.div>
 
-            {/* Phone */}
+
             <motion.div variants={fadeInUp} className="flex flex-col items-center">
               <motion.div whileHover={{ rotate: 10 }} className="bg-[#F29200] p-6 rounded-full mb-6 shadow-md">
                 <Phone className="w-10 h-10 text-white" />
@@ -194,7 +194,6 @@ export default function Contact() {
               <p className="text-gray-700 font-semibold">+880 1824187489</p>
             </motion.div>
 
-            {/* Location */}
             <motion.div variants={fadeInUp} className="flex flex-col items-center">
               <motion.div whileHover={{ rotate: 10 }} className="bg-[#F29200] p-6 rounded-full mb-6 shadow-md">
                 <MapPin className="w-10 h-10 text-white" />
@@ -209,7 +208,6 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Map Section*/}
       <motion.div 
         className="w-full h-[450px] border-t-8 border-[#F29200] overflow-hidden bg-gray-200"
         initial={{ opacity: 0 }}

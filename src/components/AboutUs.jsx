@@ -53,7 +53,7 @@ const AboutPage = () => {
         {`@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap');`}
       </style>
 
-      {/* Hero Section & Logo Animation */}
+
       <section className="relative overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           
@@ -87,7 +87,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Mission & Vision - Slow Slide-in */}
+
       <section className="py-24 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div 
@@ -120,7 +120,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* What We Do  */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
@@ -160,7 +159,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/*  Why Choose Us */}
       <section className="py-24 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div

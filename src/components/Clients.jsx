@@ -259,7 +259,7 @@ const Clients = () => {
             onClick={e => e.stopPropagation()}
             className="bg-white rounded-3xl p-8 w-full max-w-lg relative shadow-2xl overflow-hidden"
           >
-            {/* Close Button */}
+
             <button
               onClick={() => setSelectedPartner(null)}
               className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 text-gray-500 hover:bg-red-500 hover:text-white transition-all duration-200 flex items-center justify-center text-sm font-bold z-10"
@@ -267,7 +267,7 @@ const Clients = () => {
               ✕
             </button>
 
-            {/* Logo and Title */}
+
             <div className="flex flex-col items-center mb-6">
               <div className="p-3 bg-white rounded-xl shadow-sm border border-gray-50 mb-3">
                 <img
@@ -280,7 +280,7 @@ const Clients = () => {
                 {selectedPartner.name}
               </h3>
             </div>
-            {/* Info Sections */}
+
             <div className="flex flex-col gap-3 mb-8">
               <div className="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-xl p-3">
                 <span className="text-xl text-gray-600"><HiOutlineBuildingOffice /></span>
@@ -307,7 +307,6 @@ const Clients = () => {
               </div>
             </div>
 
-            {/* Client Review */}
             <div className="relative p-5 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl border border-cyan-100">
               <div className="flex items-center gap-2 mb-2">
                 <RiDoubleQuotesL className="text-xl text-cyan-400" />

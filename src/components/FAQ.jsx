@@ -108,12 +108,12 @@ const FAQ = () => {
           variants={containerVariants}
           className="grid md:grid-cols-2 gap-6 items-start"
         >
-          {/* Column 1 */}
+
           <div className="flex flex-col gap-6">
             {faqsColumn1.map((faq, index) => renderFAQItem(faq, `col1-${index}`))}
           </div>
           
-          {/* Column 2 */}
+
           <div className="flex flex-col gap-6">
             {faqsColumn2.map((faq, index) => renderFAQItem(faq, `col2-${index}`))}
           </div>

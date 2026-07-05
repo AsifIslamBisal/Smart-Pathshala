@@ -64,7 +64,7 @@ const Documentation = () => {
 
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
+
         <div className="text-center mb-16">
           <h2 className="text-base font-semibold text-[#F29200] tracking-wide uppercase">কার্যপদ্ধতি</h2>
           <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -75,7 +75,7 @@ const Documentation = () => {
           </div>
         </div>
 
-        {/* Cards Wrapper */}
+
         <div className="flex flex-wrap justify-center gap-8">
           {processSteps.map((step, index) => (
             <div key={step.id} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] group">
@@ -94,7 +94,7 @@ const Documentation = () => {
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   {step.desc}
                 </p>
-                {/* PDF Button */}
+
                 <div className="mt-auto">
                   <a
                     href={step.fileName}
@@ -111,7 +111,7 @@ const Documentation = () => {
           ))}
         </div>
 
-        {/* Footer */}
+
         <div className="mt-16 bg-[#F29200] rounded-2xl p-8 text-center text-white shadow-lg">
           <h3 className="text-2xl font-bold">আপনার প্রতিষ্ঠান কি প্রস্তুত?</h3>
           <p className="mt-2 text-blue-100">
